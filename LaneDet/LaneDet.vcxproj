@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D7A8090C-598A-4B2B-97D8-3F67FF717455}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LaneDet</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="filtNoise_1.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sales_item1.cpp" />
+    <ClCompile Include="Screen.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test_1.cpp" />
+    <ClCompile Include="test_10.cpp" />
+    <ClCompile Include="test_11.cpp" />
+    <ClCompile Include="test_12.cpp" />
+    <ClCompile Include="test_13.cpp" />
+    <ClCompile Include="test_14.cpp" />
+    <ClCompile Include="test_15.cpp" />
+    <ClCompile Include="test_16.cpp" />
+    <ClCompile Include="test_17.cpp" />
+    <ClCompile Include="test_18.cpp" />
+    <ClCompile Include="test_19.cpp" />
+    <ClCompile Include="test_2.cpp" />
+    <ClCompile Include="test_20.cpp" />
+    <ClCompile Include="test_21.cpp" />
+    <ClCompile Include="test_22.cpp" />
+    <ClCompile Include="test_23.cpp" />
+    <ClCompile Include="test_24.cpp" />
+    <ClCompile Include="test_25.cpp" />
+    <ClCompile Include="test_26.cpp" />
+    <ClCompile Include="test_27.cpp" />
+    <ClCompile Include="test_28.cpp" />
+    <ClCompile Include="test_29.cpp" />
+    <ClCompile Include="test_3.cpp" />
+    <ClCompile Include="test_30.cpp" />
+    <ClCompile Include="test_31.cpp" />
+    <ClCompile Include="test_32.cpp" />
+    <ClCompile Include="test_33.cpp" />
+    <ClCompile Include="test_34.cpp" />
+    <ClCompile Include="test_35.cpp" />
+    <ClCompile Include="test_36.cpp" />
+    <ClCompile Include="test_37.cpp" />
+    <ClCompile Include="test_38.cpp" />
+    <ClCompile Include="test_39.cpp" />
+    <ClCompile Include="test_4.cpp" />
+    <ClCompile Include="test_40.cpp" />
+    <ClCompile Include="test_41.cpp" />
+    <ClCompile Include="test_42.cpp" />
+    <ClCompile Include="test_43.cpp" />
+    <ClCompile Include="test_44.cpp" />
+    <ClCompile Include="test_45.cpp" />
+    <ClCompile Include="test_46.cpp" />
+    <ClCompile Include="test_47.cpp" />
+    <ClCompile Include="test_48.cpp" />
+    <ClCompile Include="test_49.cpp" />
+    <ClCompile Include="test_5.cpp" />
+    <ClCompile Include="test_50.cpp" />
+    <ClCompile Include="test_51.cpp" />
+    <ClCompile Include="test_52.cpp" />
+    <ClCompile Include="test_53.cpp" />
+    <ClCompile Include="test_54.cpp" />
+    <ClCompile Include="test_6.cpp" />
+    <ClCompile Include="test_7.cpp" />
+    <ClCompile Include="test_8.cpp" />
+    <ClCompile Include="test_9.cpp" />
+    <ClCompile Include="TextQuery.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CheckoutRecord.h" />
+    <ClInclude Include="Exercise.h" />
+    <ClInclude Include="Folder.h" />
+    <ClInclude Include="HasPtr.h" />
+    <ClInclude Include="HasPtr_1.h" />
+    <ClInclude Include="HasPtr_2.h" />
+    <ClInclude Include="Item_base.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="NoName.h" />
+    <ClInclude Include="Person.h" />
+    <ClInclude Include="Sales_item.h" />
+    <ClInclude Include="Sales_item1.h" />
+    <ClInclude Include="Screen.h" />
+    <ClInclude Include="ScreenPtr.h" />
+    <ClInclude Include="ScrPtr.h" />
+    <ClInclude Include="TextQuery.h" />
+    <ClInclude Include="U_Ptr.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
