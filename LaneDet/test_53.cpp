@@ -20,6 +20,8 @@
 //#include "TextQuery.h"
 //#include "NoName.h"
 #include "ScreenPtr.h"
+#include "CheckedPtr.h"
+#include "absInt.h"
 using namespace std;
 
 /////////////////////////////////2016-12-18 20:41:30
@@ -83,6 +85,23 @@ int main()
 	// 构建更安全的指针
 	//ScreenPtr p1; // error: ScreenPtr has no default constructor
 	ScreenPtr ps(new Screen(4, 4)); // ok: ps points to a copy of myScreen
+
+	// 使用重载箭头
+	Screen myScreen(4, 4);
+	ScreenPtr p(&myScreen); // copies the underlying Screen
+	p->display(cout);
+
+	// 14.7. 自增操作符和自减操作符
+	// 显式调用前缀式操作符
+	int ia[] = { 1,2,3 }, size = 3;
+	CheckedPtr parr(ia, ia + size); // iapoints to an array of ints
+	parr.operator++(0); // call postfix operator++
+	parr.operator++(); // call prefix operator++
+
+	// 14.8. 调用操作符和函数对象
+	int i = -42;
+	absInt absObj; // object that defines function call operator
+	unsigned int ui = absObj(i); // calls absInt::operator(int)
 
 	return 0;
 }
