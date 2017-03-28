@@ -22,6 +22,9 @@
 #include "ScreenPtr.h"
 #include "CheckedPtr.h"
 #include "absInt.h"
+#include "GT_cls.h"
+#include <algorithm>
+#include <functional>
 using namespace std;
 
 /////////////////////////////////2016-12-18 20:41:30
@@ -102,6 +105,52 @@ int main()
 	int i = -42;
 	absInt absObj; // object that defines function call operator
 	unsigned int ui = absObj(i); // calls absInt::operator(int)
+
+	// 14.8.1. 将函数对象用于标准库算法
+	// 使用GT_cls 函数对象
+	vector<string> words(10);
+	cout << count_if(words.begin(), words.end(), GT_cls(6))
+		<< " words 6 characters or longer" << endl;
+
+	cout << count_if(words.begin(), words.end(), GT_cls(5))
+		<< " words 5 characters or longer" << endl;
+
+	for (size_t i = 0; i != 11; ++i)
+		cout << count_if(words.begin(), words.end(), GT_cls(i))
+		<< " words " << i
+		<< " characters or longer" << endl;
+
+	// 14.8.2. 标准库定义的函数对象
+	// 表示操作数类型的模板类型
+	plus<int> intAdd; // function object that can add two int values
+	negate<int> intNegate; // function object that can negate an int value
+	// uses intAdd::operator(int, int) to add 10 and 20
+	int sum = intAdd(10, 20); // sum = 30
+	// uses intNegate::operator(int) to generate -10 as second parameter
+	// to intAdd::operator(int, int)
+	sum = intAdd(10, intNegate(10)); // sum = 0
+
+	// 在算法中使用标准库函数
+	vector<string> svec(10);
+	// passes temporary function object that applies > operator to two strings
+	sort(svec.begin(), svec.end(), greater<string>());
+
+	// 14.8.3. 函数对象的函数适配器
+	vector<int> vec(10);
+	count_if(vec.begin(), vec.end(), bind2nd(less_equal<int>(), 10));
+
+	count_if(vec.begin(), vec.end(), not1(bind2nd(less_equal<int>(), 10)));
+
+	// Exercise 14.37:
+	// 1. 查找大于 1024 的所有值。
+	count_if(vec.begin(), vec.end(), bind2nd(greater<int>(), 1024));
+	// 2. 查找不等于 pooh 的所有字符串。
+	count_if(svec.begin(), svec.end(), bind2nd(not_equal_to<string>(), "pooh"));
+	// 3. 将所有值乘以 2。
+	count_if(vec.begin(), vec.end(), bind2nd(multiplies<int>(), 2));
+
+	// Exercise 14.39:
+	count_if(svec.begin(), svec.end(), bind2nd(equal_to<int>(), 6));	// 不对
 
 	return 0;
 }
