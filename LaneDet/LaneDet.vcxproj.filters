@@ -248,5 +248,17 @@
     <ClInclude Include="Item_base.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="SmallInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="absInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GT_cls.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckedPtr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -208,9 +208,12 @@
     <ClCompile Include="TextQuery.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="absInt.h" />
+    <ClInclude Include="CheckedPtr.h" />
     <ClInclude Include="CheckoutRecord.h" />
     <ClInclude Include="Exercise.h" />
     <ClInclude Include="Folder.h" />
+    <ClInclude Include="GT_cls.h" />
     <ClInclude Include="HasPtr.h" />
     <ClInclude Include="HasPtr_1.h" />
     <ClInclude Include="HasPtr_2.h" />
@@ -223,6 +226,7 @@
     <ClInclude Include="Screen.h" />
     <ClInclude Include="ScreenPtr.h" />
     <ClInclude Include="ScrPtr.h" />
+    <ClInclude Include="SmallInt.h" />
     <ClInclude Include="TextQuery.h" />
     <ClInclude Include="U_Ptr.h" />
   </ItemGroup>
